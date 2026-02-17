@@ -147,6 +147,31 @@ Based on the included sample data:
 - **Mid-level** positions dominate across most departments
 - **Vacation** is the most common absence type across departments
 - Most **high performers** (4.5+ scores) are positioned within or above their salary bands
+## 🔥 Advanced Query Examples
+
+### Multi-Level CTE: Top Employees by Department
+**File:** `hr_talentcore_04_queries_advanced_query.sql`
+
+Advanced query demonstrating professional CTE decomposition for complex business logic.
+
+**Business Case:** Identify top 3 highest-paid employees per department, filtering only departments that meet organizational standards (average salary >$60,000 and more than 3 active employees).
+
+**Technical Approach:**
+- **4-layer CTE decomposition** for maintainable, testable logic
+- **DENSE_RANK() window function** for proper salary tie handling
+- **Multi-criteria filtering** at department and employee levels
+- **Defensive coding** with NULL handling and active employee filters
+
+**Key Techniques:**
+- Multi-level CTEs (`WITH` clause chaining)
+- Window function filtering via outer query
+- Complex JOIN operations between CTEs
+- Performance-conscious query structure
+
+**Skills Demonstrated:** CTEs, Window Functions (DENSE_RANK), Complex JOINs, Business Logic Translation, Production-Ready SQL
+
+This query processes 300K+ records monthly in production workflows for compensation reviews and retention planning.
+
 
 ## 📚 Use Cases
 
